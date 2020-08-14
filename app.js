@@ -38,6 +38,11 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", payment);
 
+
+app.use("/api", (req, res)=>{
+  return res.send("hello world");
+
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
